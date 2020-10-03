@@ -53,3 +53,37 @@ code {
 .notepar{
   position: relative;
 }
+
+.text-orange{
+  color: $main-color;
+}
+
+.sphere{
+  border-radius: 50%;
+}
+
+.user-link{
+  text-decoration: underline;
+}
+
+.date{
+  font-size: .8rem;
+}
+
+.like{
+  border: 0;
+  padding: .5rem .7rem;
+  border-radius: 50%;
+}
+
+.like-reverse{
+  transform: rotate(180deg);
+}
+
+.outline-green{
+  border: 1px solid green;
+}
+
+.like-num{
+  padding: 1rem;
+}

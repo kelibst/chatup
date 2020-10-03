@@ -28,7 +28,7 @@ const SignedIn = () => {
 
           <li className="nav-item notepar">
             <NavLink to="/" className="nav-link"><Icofont icon="letter" className="text-secondary" size="2" /> </NavLink>
-            <p className="bg-success note">14</p>
+            <p className="bg-success note">1</p>
           </li>
         </ul>
       </div>
