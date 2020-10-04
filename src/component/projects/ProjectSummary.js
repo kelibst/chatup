@@ -1,19 +1,18 @@
 import React from 'react'
 import Icofont from 'react-icofont'
 import UserImg from '../../assets/images/user.jpg'
-const ProjectSummary = () =>{
+const ProjectSummary = ({ project }) =>{
     return (
       <div className="card border-0 flex-row my-3">
       <div className="col-2 mt-4"> <img src={UserImg} alt="userImage" className="card-img sphere"/></div>
         <div className="card-body">
-        
-            <h3 className="card-title font-weight-bolder text-orange">Project Title</h3>
+            {console.log(project)}
+            <h3 className="card-title font-weight-bolder text-orange">{project.title}</h3>
 
             <p className="text-secondary date">22 Oct 2020 ~ <a href="/" className="user-link text-secondary">Keli</a></p>
             <div className="card-body">
             <p className="text-dark">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto
-                nihil quis dicta voluptates!
+               { project.content }
             </p>
 
             <div className="card-actions">
