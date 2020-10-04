@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SignedIn from './SignedIn'
+import SignedOut from './SignedOut'
 
 const NavBar = () =>{
     return (
@@ -13,6 +14,7 @@ const NavBar = () =>{
             </button>
 
             <SignedIn/>
+            <SignedOut />
             </nav>
         </div>
     )

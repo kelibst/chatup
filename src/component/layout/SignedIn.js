@@ -1,14 +1,14 @@
 import React from 'react';
 import userPic from '../../assets/images/user.jpg';
 import Icofont from 'react-icofont';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const SignedIn = () => {
     return (
         <div className="collapse  navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ul className="navbar-nav align-items-center float-right">
           <li className="nav-item active">
-            <button type="button" className="btn bg-orange text-white"> New Post</button>
+            <Link to="/create" className="btn bg-orange text-white"> New Post</Link>
           </li>
          
           <li className="nav-item mx-2">
