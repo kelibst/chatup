@@ -19,12 +19,12 @@ const ProjectSummary = () =>{
             <div className="card-actions">
                 <button type="button" className="like outline-green bg-white"><Icofont icon="like" className="text-success" /></button>
                 <span className="like-num">3</span> 
-                <button type="button" className="like bg-danger"><Icofont icon="like" className="text-white like-reverse" /></button>
+                <button type="button" className="like like-reverse bg-danger"><Icofont icon="like" className="text-white " /></button>
                 <span className="like-num">3</span> 
             </div>
             </div>
         </div>
-    </div>
+        </div>
     )
 }
 
