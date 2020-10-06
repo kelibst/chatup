@@ -16,6 +16,7 @@ class CreateProject extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
+        console.log(this.state)
         this.props.createProject(this.state)
     }
     render() {
@@ -33,10 +34,10 @@ class CreateProject extends Component {
                 </div>
                 <div className="form-group mb-4">
                     <label className="font-weight-bolder" htmlFor="Content">Post Content</label>
-                    <textarea className="form-control" name="title" id="title" placeholder="Enter the content of your post" onChange={this.handleChange}></textarea>
+                    <textarea className="form-control" name="content" id="title" placeholder="Enter the content of your post" onChange={this.handleChange}></textarea>
                 </div>
                 <div className="action-buttons d-flex">
-                <button type="submit" className="btn text-white bg-orange w-100 mr-2">Login</button>
+                <button type="submit" className="btn text-white bg-orange w-100 mr-2">Create Project</button>
                 </div>
             </form>
             </div>

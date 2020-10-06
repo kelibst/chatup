@@ -7,18 +7,36 @@ import $ from 'jquery';
 import Popper from 'popper.js';
 import './index.scss';
 import * as serviceWorker from './serviceWorker';
-import { applyMiddleware, createStore } from 'redux';
+import { applyMiddleware, compose, createStore } from 'redux';
 import rootReducer from './store/reducers/rootReducer';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import {createFirestoreInstance, getFirebase, ReactReduxFirebaseProvider } from 'react-redux-firebase';
+import { getFirestore, reduxFirestore } from 'redux-firestore';
+import fbConfig from './config/fbConfig'
+import firebase from 'firebase/app'
 
+const store = createStore(rootReducer,
+  compose(
+    applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
+    reduxFirestore(firebase, fbConfig) // redux bindings for firestore
+  )
+);
 
-const store = createStore(rootReducer, applyMiddleware(thunk))
+const rrfProps = {
+  firebase,
+  config: fbConfig,
+  dispatch: store.dispatch,
+  createFirestoreInstance
+};
+
 
 ReactDOM.render(
   <React.StrictMode>
   <Provider store={store}>
+  <ReactReduxFirebaseProvider {...rrfProps}>
     <App />
+  </ReactReduxFirebaseProvider>
   </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
